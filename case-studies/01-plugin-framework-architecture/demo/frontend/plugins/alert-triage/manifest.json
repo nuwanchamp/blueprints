@@ -1,0 +1,11 @@
+{
+  "name": "alert-triage",
+  "label": "Alert triage",
+  "navigationLabel": "Alert Triage",
+  "routePath": "/plugins/alert-triage",
+  "apiBasePath": "/api/extensions/alert-triage",
+  "remoteEntry": "/plugins/alert-triage/assets/remoteEntry.js",
+  "exposedModule": "./AlertTriagePlugin",
+  "viteConfig": "frontend/plugins/alert-triage/vite.config.js",
+  "enabled": true
+}

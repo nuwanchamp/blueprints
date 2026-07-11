@@ -1,0 +1,9 @@
+/vendor/
+node_modules/
+/var/
+!/var/data/
+!/var/data/.gitkeep
+/public/app/
+/public/plugins/
+/config/reference.php
+/.env.local

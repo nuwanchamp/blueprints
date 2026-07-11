@@ -1,0 +1,11 @@
+{
+  "name": "device-status",
+  "label": "Device status",
+  "navigationLabel": "Device Status",
+  "routePath": "/plugins/device-status",
+  "apiBasePath": "/api/extensions/device-status",
+  "remoteEntry": "/plugins/device-status/assets/remoteEntry.js",
+  "exposedModule": "./DeviceStatusPlugin",
+  "viteConfig": "frontend/plugins/device-status/vite.config.js",
+  "enabled": true
+}

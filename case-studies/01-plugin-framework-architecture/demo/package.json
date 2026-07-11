@@ -1,0 +1,25 @@
+{
+  "type": "module",
+  "scripts": {
+    "setup:plugins": "php bin/setup-plugin-db.php",
+    "restart:all": "bash bin/restart-demo.sh",
+    "stop:all": "bash bin/restart-demo.sh stop",
+    "status:all": "bash bin/restart-demo.sh status",
+    "dev": "npm run dev:host",
+    "dev:host": "vite --config frontend/host/vite.config.js --host 127.0.0.1 --force",
+    "build": "npm run build:plugins && npm run build:host",
+    "build:host": "vite build --config frontend/host/vite.config.js",
+    "build:plugins": "node bin/build-plugins.mjs",
+    "build:plugin": "npm run build:plugins",
+    "preview:host": "vite preview --config frontend/host/vite.config.js --host 127.0.0.1 --port 5173 --strictPort"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "vite": "^7.0.0"
+  },
+  "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.4.1"
+  }
+}
