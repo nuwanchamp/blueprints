@@ -1,0 +1,10 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+/build/
+
+# Original media is not published. Run `python3 tools/make_placeholders.py` to generate
+# stand-ins, or drop your own files at the same paths. Only the open-licensed font is kept.
+/Assets/*
+!/Assets/Coiny-Regular.ttf
+!/Assets/README.md

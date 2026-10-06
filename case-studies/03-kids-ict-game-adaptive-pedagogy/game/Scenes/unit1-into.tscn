@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://3l2o11ldxh4f"]
+
+[ext_resource type="Script" uid="uid://5agtjt28q3gy" path="res://Scripts/unit_1_into.gd" id="1_2i4bx"]
+[ext_resource type="VideoStream" uid="uid://d1t0iev0nubpr" path="res://Assets/Videos/Anthropomorphic_mouse_blinks_and…_202607160846.ogv" id="1_ng4mo"]
+
+[node name="Node2D" type="Node2D" unique_id=525685700]
+script = ExtResource("1_2i4bx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=589081821]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer" unique_id=247649965]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource("1_ng4mo")
+expand = true
+autoplay = true
+
+[connection signal="finished" from="CanvasLayer/VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

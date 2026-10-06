@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bhtpma2bov5t7"]
+
+[ext_resource type="Script" uid="uid://cwfdwq4ikmg81" path="res://Scripts/unit_1_level1.gd" id="1_4v7v3"]
+[ext_resource type="Texture2D" uid="uid://blqh181veisxg" path="res://Assets/idle-mouse-trans.png" id="2_wdn08"]
+[ext_resource type="AudioStream" uid="uid://cujwfihq1gdb4" path="res://Assets/ElevenLabs_2026-07-16T04_18_40_Jessica - Playful, Bright, Warm_pre_sp95_s41_sb75_se0_b_m2.mp3" id="3_85apg"]
+[ext_resource type="AudioStream" uid="uid://c0ejnq8fi3mq" path="res://Assets/ElevenLabs_2026-07-16T04_19_45_Jessica - Playful, Bright, Warm_pre_sp95_s41_sb75_se0_b_m2.mp3" id="4_lfo2i"]
+
+[node name="Node2D2" type="Node2D" unique_id=1475972849]
+script = ExtResource("1_4v7v3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1009138340]
+position = Vector2(573, 288)
+texture = ExtResource("2_wdn08")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1776890959]
+stream = ExtResource("3_85apg")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=83345839]
+stream = ExtResource("4_lfo2i")

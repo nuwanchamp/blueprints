@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://dun0p4wcbg2l6"]
+
+[ext_resource type="Texture2D" uid="uid://dtip0cu6qs1qa" path="res://Assets/bunny-house/house-cloased.png" id="1_m5153"]
+[ext_resource type="Texture2D" uid="uid://bnvd1jvjxev03" path="res://Assets/bunny-house/house-slight-open.png" id="2_guxcb"]
+[ext_resource type="Texture2D" uid="uid://d2sc5gwkklq0f" path="res://Assets/bunny-house/house-bunny-0.png" id="3_pgm8c"]
+[ext_resource type="Texture2D" uid="uid://bn3jqvar0lcfk" path="res://Assets/bunny-house/house-bunny-1.png" id="4_q3tc6"]
+[ext_resource type="Texture2D" uid="uid://bqfptks85md88" path="res://Assets/bunny-house/house-bunny2.png" id="5_xiwut"]
+[ext_resource type="Texture2D" uid="uid://dadgahu2fiep" path="res://Assets/bunny-house/house-bunny-3.png" id="6_oje2o"]
+[ext_resource type="Texture2D" uid="uid://hvjcbtojm73p" path="res://Assets/bunny-house/house-bunny-4.png" id="7_vf53m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o7wjx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_m5153")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_m5153")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_guxcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pgm8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q3tc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xiwut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_oje2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vf53m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_oje2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xiwut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xiwut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_oje2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vf53m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_oje2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xiwut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q3tc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pgm8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_guxcb")
+}],
+"loop": 0,
+"name": &"house-open",
+"speed": 5.0
+}]
+
+[node name="AnimatedHouse" type="Node2D" unique_id=317413896]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=928466088]
+sprite_frames = SubResource("SpriteFrames_o7wjx")
+animation = &"house-open"

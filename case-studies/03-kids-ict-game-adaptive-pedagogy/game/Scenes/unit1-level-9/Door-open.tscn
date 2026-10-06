@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cdwiu7l1juw0h"]
+
+[ext_resource type="Texture2D" uid="uid://bvlrxwua153cf" path="res://Assets/unit1-level9/door-open/door-1.png" id="1_si56e"]
+[ext_resource type="Texture2D" uid="uid://df0ycyur6kqfa" path="res://Assets/unit1-level9/door-open/door3.png" id="2_36kwm"]
+[ext_resource type="Texture2D" uid="uid://cgh6s1yjigrjo" path="res://Assets/unit1-level9/door-open/door-open2.png" id="3_uebl8"]
+[ext_resource type="Texture2D" uid="uid://d2adw7eif3ph4" path="res://Assets/unit1-level9/door-open/door4.png" id="4_lpubo"]
+[ext_resource type="Texture2D" uid="uid://btob166uvctqs" path="res://Assets/unit1-level9/door-open/door5.png" id="5_apfcv"]
+[ext_resource type="Texture2D" uid="uid://bint3ve0onh7o" path="res://Assets/unit1-level9/door-open/door6.png" id="6_t44ni"]
+[ext_resource type="Texture2D" uid="uid://ce0b2v1esyd02" path="res://Assets/unit1-level9/door-open/door8.png" id="7_kwtch"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1nl0a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_si56e")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_si56e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_36kwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_uebl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lpubo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_apfcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_t44ni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kwtch")
+}],
+"loop": 1,
+"name": &"door-open-dubble-click",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_si56e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_uebl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_si56e")
+}],
+"loop": 1,
+"name": &"door-open-single-click",
+"speed": 5.0
+}]
+
+[node name="DoorOpen" type="Node2D" unique_id=380685052]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=632228022]
+sprite_frames = SubResource("SpriteFrames_1nl0a")
+animation = &"door-open-single-click"
+frame_progress = 0.113898925

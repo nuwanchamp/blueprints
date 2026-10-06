@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cbalo2l83rand"]
+
+[ext_resource type="Script" uid="uid://cj4uvg7kuit8k" path="res://Scripts/unit_1_level_10.gd" id="1_pyhcr"]
+
+[node name="Unit1Level10" type="Node2D" unique_id=1352971250]
+script = ExtResource("1_pyhcr")

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://b1vxtuav75nqa"]
+
+[ext_resource type="Texture2D" uid="uid://cjho64vhi3fk" path="res://Assets/unit1-level10/bunny-eat-carrot/bunny-carrot-eat1.png" id="1_ekqh8"]
+[ext_resource type="Texture2D" uid="uid://ddmswj7nkcif3" path="res://Assets/unit1-level10/bunny-eat-carrot/bunny-carrot-eat2.png" id="2_0ih03"]
+[ext_resource type="Texture2D" uid="uid://bsbojoumd7e57" path="res://Assets/unit1-level10/bunny-eat-carrot/bunny-carrot-eat3.png" id="3_i3mxa"]
+[ext_resource type="Texture2D" uid="uid://bhm0c2ire8rs4" path="res://Assets/unit1-level10/bunny-eat-carrot/bunny-carrot-eat4.png" id="4_orcwm"]
+[ext_resource type="Texture2D" uid="uid://i2n5auntcwe6" path="res://Assets/unit1-level10/bunny-eat-carrot/bunny-carrot-eat5.png" id="5_glg0k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1nl0a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ekqh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0ih03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_i3mxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_orcwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_orcwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_i3mxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_orcwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_orcwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_glg0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_glg0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_glg0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_ekqh8")
+}],
+"loop": 1,
+"name": &"eating",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ekqh8")
+}],
+"loop": 1,
+"name": &"waiting",
+"speed": 5.0
+}]
+
+[node name="BunnyEats" type="Node2D" unique_id=473078323]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1134671673]
+position = Vector2(1.25, 0)
+scale = Vector2(1.0072464, 1)
+sprite_frames = SubResource("SpriteFrames_1nl0a")
+animation = &"eating"
+frame_progress = 0.5175918

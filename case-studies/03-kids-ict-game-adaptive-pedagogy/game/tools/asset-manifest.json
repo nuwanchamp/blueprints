@@ -1,0 +1,695 @@
+{
+ "Assets/ElevenLabs_2026-07-16T04_18_40_Jessica - Playful, Bright, Warm_pre_sp95_s41_sb75_se0_b_m2.mp3": {
+  "seconds": 1.62
+ },
+ "Assets/ElevenLabs_2026-07-16T04_19_45_Jessica - Playful, Bright, Warm_pre_sp95_s41_sb75_se0_b_m2.mp3": {
+  "seconds": 2.04
+ },
+ "Assets/ElevenLabs_2026-07-17T06_34_58_Jessica - Playful, Bright, Warm_pre_sp95_s41_sb75_se0_b_m2.mp3": {
+  "seconds": 4.83
+ },
+ "Assets/Gemini_Generated_Image_a8pmp6a8pmp6a8pm.png": {
+  "w": 1363,
+  "h": 768
+ },
+ "Assets/SolidArrow-Right.png": {
+  "w": 56,
+  "h": 56
+ },
+ "Assets/Videos/Anthropomorphic_mouse_blinks_and\u2026_202607160846.ogv": {
+  "seconds": 10.43,
+  "w": 1920,
+  "h": 1080
+ },
+ "Assets/Videos/Zig-intro.ogv": {
+  "seconds": 10.01,
+  "w": 1280,
+  "h": 720
+ },
+ "Assets/Videos/init-screen.ogv": {
+  "seconds": 10.01,
+  "w": 1280,
+  "h": 720
+ },
+ "Assets/Videos/welcome.ogv": {
+  "seconds": 10.01,
+  "w": 1280,
+  "h": 720
+ },
+ "Assets/balloon-pop-sound.mp3": {
+  "seconds": 0.53
+ },
+ "Assets/balloons/balloons_01.png": {
+  "w": 343,
+  "h": 432
+ },
+ "Assets/balloons/balloons_02.png": {
+  "w": 343,
+  "h": 432
+ },
+ "Assets/balloons/balloons_03.png": {
+  "w": 343,
+  "h": 432
+ },
+ "Assets/balloons/balloons_04.png": {
+  "w": 343,
+  "h": 432
+ },
+ "Assets/balloons/balloons_05.png": {
+  "w": 343,
+  "h": 432
+ },
+ "Assets/balloons/balloons_06.png": {
+  "w": 343,
+  "h": 432
+ },
+ "Assets/balloons/balloons_07.png": {
+  "w": 348,
+  "h": 432
+ },
+ "Assets/bunny-house/bunny-founded.mp3": {
+  "seconds": 2.19
+ },
+ "Assets/bunny-house/chick-founded.mp3": {
+  "seconds": 2.19
+ },
+ "Assets/bunny-house/house-bunny-0.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/bunny-house/house-bunny-1.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/bunny-house/house-bunny-3.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/bunny-house/house-bunny-4.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/bunny-house/house-bunny2.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/bunny-house/house-cloased.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/bunny-house/house-slight-open.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/bunny-house/kitty-found.mp3": {
+  "seconds": 3.08
+ },
+ "Assets/bunny-house/pip-waiting-2.mp3": {
+  "seconds": 4.68
+ },
+ "Assets/bunny-house/pip-waiting.mp3": {
+  "seconds": 4.52
+ },
+ "Assets/bunny-house/puppy-found.mp3": {
+  "seconds": 2.93
+ },
+ "Assets/bunny-house/smaller-houes.mp3": {
+  "seconds": 4.83
+ },
+ "Assets/bunny-house/visited-all.mp3": {
+  "seconds": 5.33
+ },
+ "Assets/bunny/Bunny-Idle.png": {
+  "w": 116,
+  "h": 134
+ },
+ "Assets/bunny/Bunny-walk-2.png": {
+  "w": 116,
+  "h": 134
+ },
+ "Assets/bunny/Bunny-walk.png": {
+  "w": 116,
+  "h": 134
+ },
+ "Assets/chick-house/house-chick-0.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/chick-house/house-chick1.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/chick-house/house-chick2.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/chick-house/house-chick3.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/chick-house/house-chick4.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/gravity-on.png": {
+  "w": 64,
+  "h": 64
+ },
+ "Assets/handmouse.png": {
+  "w": 111,
+  "h": 99
+ },
+ "Assets/idle-mouse-trans.png": {
+  "w": 382,
+  "h": 219
+ },
+ "Assets/keyboard-mascot-empty.png": {
+  "w": 1200,
+  "h": 896
+ },
+ "Assets/keyboard-mascot-nokeys-trans.png": {
+  "w": 1200,
+  "h": 896
+ },
+ "Assets/keyboard-mascot-trans.png": {
+  "w": 1200,
+  "h": 896
+ },
+ "Assets/kitty-house/house-kitty-0.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/kitty-house/house-kitty-1.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/kitty-house/house-kitty-2.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/kitty-house/house-kitty-3.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/kitty-house/house-slight-open.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/pointer.png": {
+  "w": 90,
+  "h": 99
+ },
+ "Assets/pop-all-the bubbles.mp3": {
+  "seconds": 2.19
+ },
+ "Assets/puppy-house/house-dog-0.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/puppy-house/house-dog-1.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/puppy-house/house-dog-2.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/puppy-house/house-dog-3.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/puppy-house/house-dog-4.png": {
+  "w": 749,
+  "h": 501
+ },
+ "Assets/rainbow roots.png": {
+  "w": 1305,
+  "h": 1206
+ },
+ "Assets/tennis-ball.png": {
+  "w": 694,
+  "h": 694
+ },
+ "Assets/unit1-level10/all-tidy.mp3": {
+  "seconds": 4.44
+ },
+ "Assets/unit1-level10/bonus.mp3": {
+  "seconds": 5.15
+ },
+ "Assets/unit1-level10/bunny-eat-carrot/bunny-carrot-eat1.png": {
+  "w": 435,
+  "h": 586
+ },
+ "Assets/unit1-level10/bunny-eat-carrot/bunny-carrot-eat2.png": {
+  "w": 435,
+  "h": 586
+ },
+ "Assets/unit1-level10/bunny-eat-carrot/bunny-carrot-eat3.png": {
+  "w": 435,
+  "h": 586
+ },
+ "Assets/unit1-level10/bunny-eat-carrot/bunny-carrot-eat4.png": {
+  "w": 435,
+  "h": 586
+ },
+ "Assets/unit1-level10/bunny-eat-carrot/bunny-carrot-eat5.png": {
+  "w": 435,
+  "h": 586
+ },
+ "Assets/unit1-level10/bunny-eat-carrot/currot.png": {
+  "w": 513,
+  "h": 557
+ },
+ "Assets/unit1-level10/bunny-hungry.mp3": {
+  "seconds": 8.75
+ },
+ "Assets/unit1-level10/drag-toys.mp3": {
+  "seconds": 2.51
+ },
+ "Assets/unit1-level10/in-it-goes.mp3": {
+  "seconds": 2.04
+ },
+ "Assets/unit1-level10/it-slipped.mp3": {
+  "seconds": 3.08
+ },
+ "Assets/unit1-level10/press-the button.mp3": {
+  "seconds": 5.64
+ },
+ "Assets/unit1-level10/toy-box-tidy/toybox.png": {
+  "w": 460,
+  "h": 451
+ },
+ "Assets/unit1-level10/yumyum.mp3": {
+  "seconds": 2.85
+ },
+ "Assets/unit1-level5/flag.png": {
+  "w": 512,
+  "h": 512
+ },
+ "Assets/unit1-level5/walk-whith-me.mp3": {
+  "seconds": 5.15
+ },
+ "Assets/unit1-level5/walk-whole.mp3": {
+  "seconds": 4.13
+ },
+ "Assets/unit1-level5/wiggly-path.mp3": {
+  "seconds": 2.77
+ },
+ "Assets/unit1-level5/youdidit.mp3": {
+  "seconds": 4.52
+ },
+ "Assets/unit1-level5/zigzag.mp3": {
+  "seconds": 4.13
+ },
+ "Assets/unit1-level6/another-door.mp3": {
+  "seconds": 2.59
+ },
+ "Assets/unit1-level6/enter-expert.mp3": {
+  "seconds": 2.59
+ },
+ "Assets/unit1-level6/kitty-poke/arrow-to-hand.mp3": {
+  "seconds": 4.21
+ },
+ "Assets/unit1-level6/kitty-poke/clicking-champion.mp3": {
+  "seconds": 3.24
+ },
+ "Assets/unit1-level6/kitty-poke/ketten-poke_01.png": {
+  "w": 512,
+  "h": 512
+ },
+ "Assets/unit1-level6/kitty-poke/ketten-poke_02.png": {
+  "w": 512,
+  "h": 512
+ },
+ "Assets/unit1-level6/kitty-poke/ketten-poke_03.png": {
+  "w": 512,
+  "h": 512
+ },
+ "Assets/unit1-level6/kitty-poke/ketten-poke_05.png": {
+  "w": 512,
+  "h": 512
+ },
+ "Assets/unit1-level6/kitty-poke/ketten-poke_06.png": {
+  "w": 512,
+  "h": 512
+ },
+ "Assets/unit1-level6/kitty-poke/ketten-poke_07.png": {
+  "w": 512,
+  "h": 512
+ },
+ "Assets/unit1-level6/kitty-poke/left-click.mp3": {
+  "seconds": 5.8
+ },
+ "Assets/unit1-level6/kitty-poke/other-button.mp3": {
+  "seconds": 4.44
+ },
+ "Assets/unit1-level6/kitty-push/Layer 1.png": {
+  "w": 620,
+  "h": 514
+ },
+ "Assets/unit1-level6/kitty-push/Layer 2.png": {
+  "w": 620,
+  "h": 514
+ },
+ "Assets/unit1-level6/kitty-push/Layer 3.png": {
+  "w": 620,
+  "h": 514
+ },
+ "Assets/unit1-level6/kitty-push/Layer 4.png": {
+  "w": 620,
+  "h": 514
+ },
+ "Assets/unit1-level6/kitty-push/Layer 5.png": {
+  "w": 620,
+  "h": 514
+ },
+ "Assets/unit1-level6/look-for-enter-key.mp3": {
+  "seconds": 2.43
+ },
+ "Assets/unit1-level6/when-ready-2.mp3": {
+  "seconds": 2.43
+ },
+ "Assets/unit1-level6/when-ready.mp3": {
+  "seconds": 2.69
+ },
+ "Assets/unit1-level7/look-all-the-toys.mp3": {
+  "seconds": 4.36
+ },
+ "Assets/unit1-level7/pop-the-bubbles.mp3": {
+  "seconds": 3.24
+ },
+ "Assets/unit1-level7/puppy-cart-holding_03.png": {
+  "w": 454,
+  "h": 359
+ },
+ "Assets/unit1-level7/puppy-cart-holding_05.png": {
+  "w": 497,
+  "h": 359
+ },
+ "Assets/unit1-level7/puppy-cart-holding_08.png": {
+  "w": 454,
+  "h": 356
+ },
+ "Assets/unit1-level7/puppy-cart-holding_17.png": {
+  "w": 442,
+  "h": 357
+ },
+ "Assets/unit1-level7/puppy-cart-holding_22.png": {
+  "w": 454,
+  "h": 359
+ },
+ "Assets/unit1-level7/puppy-cart2_03.png": {
+  "w": 454,
+  "h": 359
+ },
+ "Assets/unit1-level7/toys-are-free.mp3": {
+  "seconds": 2.85
+ },
+ "Assets/unit1-level7/toys_03.png": {
+  "w": 273,
+  "h": 284
+ },
+ "Assets/unit1-level7/toys_05.png": {
+  "w": 218,
+  "h": 284
+ },
+ "Assets/unit1-level7/toys_07.png": {
+  "w": 239,
+  "h": 284
+ },
+ "Assets/unit1-level7/toys_10.png": {
+  "w": 294,
+  "h": 282
+ },
+ "Assets/unit1-level7/toys_13.png": {
+  "w": 302,
+  "h": 282
+ },
+ "Assets/unit1-level8/cant-catch-me.mp3": {
+  "seconds": 5.41
+ },
+ "Assets/unit1-level8/caught-me.mp3": {
+  "seconds": 2.51
+ },
+ "Assets/unit1-level8/champion-chaser.mp3": {
+  "seconds": 4.05
+ },
+ "Assets/unit1-level8/chase-me.mp3": {
+  "seconds": 3.4
+ },
+ "Assets/unit1-level8/pip-tired.mp3": {
+  "seconds": 5.15
+ },
+ "Assets/unit1-level9/A present.mp3": {
+  "seconds": 3.32
+ },
+ "Assets/unit1-level9/a party.mp3": {
+  "seconds": 2.12
+ },
+ "Assets/unit1-level9/a-puppy.mp3": {
+  "seconds": 2.77
+ },
+ "Assets/unit1-level9/almost-faster.mp3": {
+  "seconds": 2.85
+ },
+ "Assets/unit1-level9/big-door.mp3": {
+  "seconds": 3.47
+ },
+ "Assets/unit1-level9/click-click-champion.mp3": {
+  "seconds": 3.87
+ },
+ "Assets/unit1-level9/door-open/door-1.png": {
+  "w": 1080,
+  "h": 1920
+ },
+ "Assets/unit1-level9/door-open/door-open2.png": {
+  "w": 1080,
+  "h": 1920
+ },
+ "Assets/unit1-level9/door-open/door3.png": {
+  "w": 1080,
+  "h": 1920
+ },
+ "Assets/unit1-level9/door-open/door4.png": {
+  "w": 1080,
+  "h": 1920
+ },
+ "Assets/unit1-level9/door-open/door5.png": {
+  "w": 1080,
+  "h": 1920
+ },
+ "Assets/unit1-level9/door-open/door6.png": {
+  "w": 1080,
+  "h": 1920
+ },
+ "Assets/unit1-level9/door-open/door8.png": {
+  "w": 1080,
+  "h": 1920
+ },
+ "Assets/unit1-level9/gift box opens/present-open1.png": {
+  "w": 504,
+  "h": 376
+ },
+ "Assets/unit1-level9/gift box opens/present-open2.png": {
+  "w": 504,
+  "h": 376
+ },
+ "Assets/unit1-level9/gift box opens/present-open3.png": {
+  "w": 504,
+  "h": 376
+ },
+ "Assets/unit1-level9/gift box opens/present-open4.png": {
+  "w": 504,
+  "h": 376
+ },
+ "Assets/unit1-level9/gift box opens/present-open5.png": {
+  "w": 504,
+  "h": 376
+ },
+ "Assets/unit1-level9/gift box opens/present-open6.png": {
+  "w": 504,
+  "h": 376
+ },
+ "Assets/unit1-level9/gift box opens/present-open7.png": {
+  "w": 504,
+  "h": 376
+ },
+ "Assets/unit1-level9/onle-click-knocks.mp3": {
+  "seconds": 9.25
+ },
+ "Assets/unit1-level9/oooh-sparkly.mp3": {
+  "seconds": 3.16
+ },
+ "Assets/unit1-level9/treasure-chest/treasure-chest1.png": {
+  "w": 800,
+  "h": 800
+ },
+ "Assets/unit1-level9/treasure-chest/treasure-chest2.png": {
+  "w": 800,
+  "h": 800
+ },
+ "Assets/unit1-level9/treasure-chest/treasure-chest3.png": {
+  "w": 800,
+  "h": 800
+ },
+ "Assets/unit1-level9/treasure-chest/treasure-chest4.png": {
+  "w": 800,
+  "h": 800
+ },
+ "Assets/unit1-level9/treasure-chest/treasure-chest5.png": {
+  "w": 800,
+  "h": 800
+ },
+ "Assets/unit1-level9/treasure-chest/treasure-chest6.png": {
+  "w": 800,
+  "h": 800
+ },
+ "Assets/unit2-level1/found-a-key.mp3": {
+  "seconds": 2.35
+ },
+ "Assets/unit2-level1/press-any-key.mp3": {
+  "seconds": 3.63
+ },
+ "Assets/unit2-level10/build-a-word.mp3": {
+  "seconds": 6.43
+ },
+ "Assets/unit2-level10/can-you-type.mp3": {
+  "seconds": 2.93
+ },
+ "Assets/unit2-level10/check-your-word.mp3": {
+  "seconds": 3.08
+ },
+ "Assets/unit2-level10/next-letter-is.mp3": {
+  "seconds": 1.15
+ },
+ "Assets/unit2-level10/not-done-yet.mp3": {
+  "seconds": 2.93
+ },
+ "Assets/unit2-level10/not-quite-it.mp3": {
+  "seconds": 4.05
+ },
+ "Assets/unit2-level10/press-backspace.mp3": {
+  "seconds": 2.04
+ },
+ "Assets/unit2-level10/word-is-full.mp3": {
+  "seconds": 4.13
+ },
+ "Assets/unit2-level10/you-typed-whole.mp3": {
+  "seconds": 4.28
+ },
+ "Assets/unit2-level10/you-typed.mp3": {
+  "seconds": 3.4
+ },
+ "Assets/unit2-level10/your-word-is-ready.mp3": {
+  "seconds": 2.51
+ },
+ "Assets/unit2-level2/key-is-magic.mp3": {
+  "seconds": 3.32
+ },
+ "Assets/unit2-level2/lighting-up.mp3": {
+  "seconds": 2.35
+ },
+ "Assets/unit2-level3/almost-space-bar.mp3": {
+  "seconds": 3.71
+ },
+ "Assets/unit2-level3/longest-key.mp3": {
+  "seconds": 2.77
+ },
+ "Assets/unit2-level3/press-spacebar.mp3": {
+  "seconds": 2.35
+ },
+ "Assets/unit2-level3/watch-me-jump.mp3": {
+  "seconds": 5.49
+ },
+ "Assets/unit2-level3/what-a-jumper.mp3": {
+  "seconds": 3.63
+ },
+ "Assets/unit2-level4/almost-keep-looking.mp3": {
+  "seconds": 2.19
+ },
+ "Assets/unit2-level4/amazing-you-found-it-all.mp3": {
+  "seconds": 2.93
+ },
+ "Assets/unit2-level4/can-you-find.mp3": {
+  "seconds": 3.97
+ },
+ "Assets/unit2-level4/more-letters.mp3": {
+  "seconds": 2.27
+ },
+ "Assets/unit2-level4/press-when-you-see.mp3": {
+  "seconds": 3.71
+ },
+ "Assets/unit2-level5/more-carrots.mp3": {
+  "seconds": 2.93
+ },
+ "Assets/unit2-level5/use-arrow-keys.mp3": {
+  "seconds": 4.44
+ },
+ "Assets/unit2-level5/what-a-hopper.mp3": {
+  "seconds": 2.43
+ },
+ "Assets/unit2-level6/fence.png": {
+  "w": 756,
+  "h": 542
+ },
+ "Assets/unit2-level7/almost-press-the-letter.mp3": {
+  "seconds": 1.8
+ },
+ "Assets/unit2-level7/help-letters.mp3": {
+  "seconds": 4.44
+ },
+ "Assets/unit2-level7/keep-popping.mp3": {
+  "seconds": 2.85
+ },
+ "Assets/unit2-level7/press-the-letter.mp3": {
+  "seconds": 2.27
+ },
+ "Assets/unit2-level7/that-parade-is-done.mp3": {
+  "seconds": 3.0
+ },
+ "Assets/unit2-level8/basket-is-full.mp3": {
+  "seconds": 3.4
+ },
+ "Assets/unit2-level8/keep-going.mp3": {
+  "seconds": 2.12
+ },
+ "Assets/unit2-level8/more-letters-are-falling.mp3": {
+  "seconds": 2.93
+ },
+ "Assets/unit2-level8/oophs-it-landed.mp3": {
+  "seconds": 3.24
+ },
+ "Assets/unit2-level8/press-before-lands.mp3": {
+  "seconds": 1.96
+ },
+ "Assets/unit2-level8/press-right-key.mp3": {
+  "seconds": 2.35
+ },
+ "Assets/unit2-level8/take-your-time.mp3": {
+  "seconds": 3.0
+ },
+ "Assets/unit2-level8/uh-oh.mp3": {
+  "seconds": 3.71
+ },
+ "Assets/unit2-level9/hold-shift.mp3": {
+  "seconds": 2.69
+ },
+ "Assets/unit2-level9/hold-special-key.mp3": {
+  "seconds": 4.75
+ },
+ "Assets/unit2-level9/its-a-big-letter.mp3": {
+  "seconds": 2.43
+ },
+ "Assets/unit2-level9/make-it-big.mp3": {
+  "seconds": 2.51
+ },
+ "Assets/unit2-level9/six-big-letter.mp3": {
+  "seconds": 3.08
+ },
+ "Assets/unit2-level9/so-close.mp3": {
+  "seconds": 3.24
+ },
+ "Assets/unit2-level9/this-one-is the-letter.mp3": {
+  "seconds": 2.51
+ }
+}

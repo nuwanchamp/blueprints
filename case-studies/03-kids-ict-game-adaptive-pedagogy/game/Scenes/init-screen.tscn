@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c4dyhgohqxfxy"]
+
+[ext_resource type="VideoStream" uid="uid://d2o0wi60l8a26" path="res://Assets/Videos/init-screen.ogv" id="1_init"]
+[ext_resource type="Script" uid="uid://2l4d5cxvwlhl" path="res://Scripts/init_screen.gd" id="2_init"]
+
+[node name="Node2D" type="Node2D" unique_id=396805644]
+script = ExtResource("2_init")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1775525739]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer" unique_id=919344046]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource("1_init")
+autoplay = true
+expand = true
+
+[connection signal="finished" from="CanvasLayer/VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

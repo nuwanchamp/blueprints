@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cvmggljr7ibo1"]
+
+[ext_resource type="Texture2D" uid="uid://dy814ffybrlqw" path="res://Assets/unit1-level9/gift box opens/present-open1.png" id="1_mbp3t"]
+[ext_resource type="Texture2D" uid="uid://dx4vsryp4b7yr" path="res://Assets/unit1-level9/gift box opens/present-open2.png" id="2_ey6lh"]
+[ext_resource type="Texture2D" uid="uid://c1xu54svsoiub" path="res://Assets/unit1-level9/gift box opens/present-open3.png" id="3_vnafv"]
+[ext_resource type="Texture2D" uid="uid://d31k624mkt22" path="res://Assets/unit1-level9/gift box opens/present-open4.png" id="4_gsjcn"]
+[ext_resource type="Texture2D" uid="uid://bdxtotr0iy5s8" path="res://Assets/unit1-level9/gift box opens/present-open5.png" id="5_jj1ch"]
+[ext_resource type="Texture2D" uid="uid://6ol2jsfcs3b6" path="res://Assets/unit1-level9/gift box opens/present-open6.png" id="6_hqn2c"]
+[ext_resource type="Texture2D" uid="uid://up26lpuxsa41" path="res://Assets/unit1-level9/gift box opens/present-open7.png" id="7_0mwfs"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1nl0a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mbp3t")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mbp3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ey6lh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vnafv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gsjcn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jj1ch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hqn2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0mwfs")
+}],
+"loop": 1,
+"name": &"present-open-double-click",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mbp3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ey6lh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_mbp3t")
+}],
+"loop": 1,
+"name": &"present-open-single-click",
+"speed": 5.0
+}]
+
+[node name="PresentOpen" type="Node2D" unique_id=1751986409]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=801980461]
+sprite_frames = SubResource("SpriteFrames_1nl0a")
+frame_progress = 0.952329

@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://df2b27yoki4bd"]
+
+[ext_resource type="Texture2D" uid="uid://bi61q86qed4t0" path="res://Assets/unit1-level6/kitty-poke/ketten-poke_01.png" id="1_nkiu5"]
+[ext_resource type="Texture2D" uid="uid://dh7iypjgahwql" path="res://Assets/unit1-level6/kitty-poke/ketten-poke_02.png" id="2_fl3wo"]
+[ext_resource type="Texture2D" uid="uid://c5x33nvr1s6t1" path="res://Assets/unit1-level6/kitty-poke/ketten-poke_03.png" id="3_mopkm"]
+[ext_resource type="Texture2D" uid="uid://cmnelc732knyp" path="res://Assets/unit1-level6/kitty-poke/ketten-poke_05.png" id="4_8h47o"]
+[ext_resource type="Texture2D" uid="uid://df27x5abmph6c" path="res://Assets/unit1-level6/kitty-poke/ketten-poke_06.png" id="5_x2rkw"]
+[ext_resource type="Texture2D" uid="uid://c0rm7qtrolccd" path="res://Assets/unit1-level6/kitty-poke/ketten-poke_07.png" id="6_gkud7"]
+[ext_resource type="Texture2D" uid="uid://nylupjxintwv" path="res://Assets/unit1-level6/kitty-push/Layer 5.png" id="7_gkud7"]
+[ext_resource type="Texture2D" uid="uid://bs3ece1efveuf" path="res://Assets/unit1-level6/kitty-push/Layer 4.png" id="8_r5u6i"]
+[ext_resource type="Texture2D" uid="uid://b6qh1dixuqomi" path="res://Assets/unit1-level6/kitty-push/Layer 3.png" id="9_fptkm"]
+[ext_resource type="Texture2D" uid="uid://clliuus5ugyh0" path="res://Assets/unit1-level6/kitty-push/Layer 2.png" id="10_6qhyb"]
+[ext_resource type="Texture2D" uid="uid://c5dp0y5jhq5bq" path="res://Assets/unit1-level6/kitty-push/Layer 1.png" id="11_eq7u2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1nl0a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nkiu5")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nkiu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fl3wo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mopkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8h47o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_x2rkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gkud7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_nkiu5")
+}],
+"loop": 1,
+"name": &"poked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_gkud7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_r5u6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fptkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6qhyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_eq7u2")
+}],
+"loop": 1,
+"name": &"pushed",
+"speed": 5.0
+}]
+
+[node name="KittyPoke" type="Node2D" unique_id=108194961]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1762660308]
+sprite_frames = SubResource("SpriteFrames_1nl0a")
+animation = &"pushed"

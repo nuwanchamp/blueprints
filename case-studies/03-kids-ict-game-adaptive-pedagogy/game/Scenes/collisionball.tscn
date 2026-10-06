@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://davpamcrh8t8r"]
+
+[ext_resource type="Script" uid="uid://dk8f2wstg5d0k" path="res://Scripts/collisionball.gd" id="1_k4hgm"]
+[ext_resource type="Texture2D" uid="uid://dr5ptpycasaby" path="res://Assets/tennis-ball.png" id="2_k4hgm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q621k"]
+
+[node name="Area2D" type="RigidBody2D" unique_id=1834944451 groups=["balls"]]
+mass = 0.1
+script = ExtResource("1_k4hgm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2083047319]
+scale = Vector2(1.5704291, 1.646054)
+shape = SubResource("CircleShape2D_q621k")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1732497644]
+position = Vector2(1.8082279, 0.058187008)
+scale = Vector2(0.038830608, 0.037007645)
+texture = ExtResource("2_k4hgm")

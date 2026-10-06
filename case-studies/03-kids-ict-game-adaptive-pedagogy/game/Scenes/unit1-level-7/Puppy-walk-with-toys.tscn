@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://vhivxs0f3st8"]
+
+[ext_resource type="Texture2D" uid="uid://cl8ecvb5xf73o" path="res://Assets/unit1-level7/puppy-cart2_03.png" id="1_lu44x"]
+[ext_resource type="Texture2D" uid="uid://dy12vmj8rvnsa" path="res://Assets/unit1-level7/puppy-cart-holding_03.png" id="2_klirf"]
+[ext_resource type="Texture2D" uid="uid://bgreayfse2ijt" path="res://Assets/unit1-level7/puppy-cart-holding_05.png" id="3_2ega0"]
+[ext_resource type="Texture2D" uid="uid://duc2qp63fwpfk" path="res://Assets/unit1-level7/puppy-cart-holding_08.png" id="4_cdimd"]
+[ext_resource type="Texture2D" uid="uid://dyahghrc1mpiu" path="res://Assets/unit1-level7/puppy-cart-holding_22.png" id="5_p0p00"]
+[ext_resource type="Texture2D" uid="uid://bjn5vjl5pa08j" path="res://Assets/unit1-level7/puppy-cart-holding_17.png" id="6_d4il7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1nl0a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lu44x")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_klirf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2ega0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cdimd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p0p00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_d4il7")
+}],
+"loop": 1,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[node name="PuppyWalkWithToys" type="Node2D" unique_id=1944453518]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=468177540]
+sprite_frames = SubResource("SpriteFrames_1nl0a")
+animation = &"walking"
+frame_progress = 0.7712211

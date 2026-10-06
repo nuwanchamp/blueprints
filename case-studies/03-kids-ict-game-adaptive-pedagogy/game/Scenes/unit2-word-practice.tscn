@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/unit_2_word_practice.gd" id="1_u2wp"]
+
+[node name="Unit2WordPractice" type="Node2D"]
+script = ExtResource("1_u2wp")

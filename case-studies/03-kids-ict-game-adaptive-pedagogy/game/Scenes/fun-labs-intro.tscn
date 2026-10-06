@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://8sdeep13kxof"]
+
+[ext_resource type="Script" uid="uid://415feouirql6" path="res://Scripts/fun_labs_intro.gd" id="1_fl"]
+
+[node name="FunLabsIntro" type="Node2D" unique_id=349266350]
+script = ExtResource("1_fl")

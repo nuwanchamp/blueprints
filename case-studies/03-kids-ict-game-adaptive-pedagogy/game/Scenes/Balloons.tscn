@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://vckao8dkb6dw"]
+
+[ext_resource type="Script" uid="uid://po7proj1po0b" path="res://Scenes/balloons.gd" id="1_3s3qm"]
+[ext_resource type="Texture2D" uid="uid://bnr1gkmmehwif" path="res://Assets/balloons/balloons_01.png" id="1_plr1u"]
+[ext_resource type="Texture2D" uid="uid://c5cir5tduakrn" path="res://Assets/balloons/balloons_02.png" id="2_3s3qm"]
+[ext_resource type="Texture2D" uid="uid://dq5fnpeto0t2g" path="res://Assets/balloons/balloons_03.png" id="3_2jxpt"]
+[ext_resource type="Texture2D" uid="uid://2m8r1r1ymdt7" path="res://Assets/balloons/balloons_04.png" id="4_g6d52"]
+[ext_resource type="Texture2D" uid="uid://c4q2j2jv8bdi8" path="res://Assets/balloons/balloons_05.png" id="5_qd8u5"]
+[ext_resource type="Texture2D" uid="uid://ccdgixhmhag7p" path="res://Assets/balloons/balloons_06.png" id="6_lvjpu"]
+[ext_resource type="Texture2D" uid="uid://bu8vaymsgnwt1" path="res://Assets/balloons/balloons_07.png" id="7_y32kb"]
+[ext_resource type="AudioStream" uid="uid://chq18uni2meuw" path="res://Assets/balloon-pop-sound.mp3" id="9_2jxpt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1nl0a"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1nl0a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_plr1u")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_plr1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3s3qm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2jxpt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_g6d52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qd8u5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lvjpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_y32kb")
+}],
+"loop": 0,
+"name": &"pops",
+"speed": 5.0
+}]
+
+[node name="Balloons" type="RigidBody2D" unique_id=1566445368 groups=["balloons"]]
+mass = 0.014
+script = ExtResource("1_3s3qm")
+speed = null
+bounce = null
+next_scene = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1778688040]
+position = Vector2(-25, 4.999999)
+rotation = 0.2617994
+scale = Vector2(-4.0321155, 3.6022768)
+shape = SubResource("CircleShape2D_1nl0a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=364185464]
+position = Vector2(-37, 6)
+scale = Vector2(0.30590484, 0.26120874)
+sprite_frames = SubResource("SpriteFrames_1nl0a")
+animation = &"pops"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=703765871]
+stream = ExtResource("9_2jxpt")

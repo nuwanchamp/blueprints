@@ -1,0 +1,227 @@
+[gd_scene format=3 uid="uid://bbbgt5m22edb0"]
+
+[ext_resource type="PackedScene" uid="uid://davpamcrh8t8r" path="res://Scenes/collisionball.tscn" id="1_4frd1"]
+[ext_resource type="Script" uid="uid://cyvkcg4ndfca7" path="res://Scripts/unit_1_level_2.gd" id="1_scha3"]
+[ext_resource type="PackedScene" uid="uid://bsh10g1m0xeop" path="res://Scenes/cursor.tscn" id="2_b0ipy"]
+[ext_resource type="Texture2D" uid="uid://bdfkehft7f4b0" path="res://Assets/gravity-on.png" id="3_5uke2"]
+[ext_resource type="Texture2D" uid="uid://cu7mryr4cpk88" path="res://Assets/SolidArrow-Right.png" id="5_vp60q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1nl0a"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.0018410675, 0.0018410688, 0.0018410651, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.1584723, 0.15847233, 0.1584723, 0.6)
+shadow_size = 1
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vp60q"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.0018410675, 0.0018410688, 0.0018410651, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.1584723, 0.15847233, 0.1584723, 0.6)
+shadow_size = 1
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yc1kv"]
+bg_color = Color(0.87542564, 0.8700357, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.0018410675, 0.0018410688, 0.0018410651, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.1584723, 0.15847233, 0.1584723, 0.6)
+shadow_size = 1
+shadow_offset = Vector2(4, 4)
+
+[node name="Node2D" type="Node2D" unique_id=2095851830]
+script = ExtResource("1_scha3")
+
+[node name="Area2D" parent="." unique_id=382590029 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D2" parent="." unique_id=1834944451 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D3" parent="." unique_id=425231964 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D5" parent="." unique_id=1394301469 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D6" parent="." unique_id=474961686 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D7" parent="." unique_id=945291445 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D8" parent="." unique_id=1150740223 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D9" parent="." unique_id=406644330 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D10" parent="." unique_id=1354302669 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D11" parent="." unique_id=34259276 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D12" parent="." unique_id=405712358 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D13" parent="." unique_id=1327114768 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D14" parent="." unique_id=1360127616 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D15" parent="." unique_id=614708886 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D16" parent="." unique_id=1239665119 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D17" parent="." unique_id=1751485607 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D18" parent="." unique_id=959860864 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D19" parent="." unique_id=1001762845 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D20" parent="." unique_id=356711039 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D21" parent="." unique_id=261278800 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Area2D22" parent="." unique_id=1359505146 instance=ExtResource("1_4frd1")]
+position = Vector2(344, 292)
+
+[node name="Node2D" parent="." unique_id=363534998 instance=ExtResource("2_b0ipy")]
+position = Vector2(516, 282)
+
+[node name="Area2D4" parent="." unique_id=187318002 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D23" parent="." unique_id=1191475977 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D24" parent="." unique_id=46420166 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D25" parent="." unique_id=1534537033 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D26" parent="." unique_id=1584824499 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D27" parent="." unique_id=1738792174 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D28" parent="." unique_id=2042837122 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D29" parent="." unique_id=1608657006 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D30" parent="." unique_id=1304444469 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D31" parent="." unique_id=466968602 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D32" parent="." unique_id=1222309782 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D33" parent="." unique_id=1358432660 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D34" parent="." unique_id=1236639415 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D35" parent="." unique_id=592357237 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D36" parent="." unique_id=1867519123 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D37" parent="." unique_id=1132265876 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D38" parent="." unique_id=1289136334 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D39" parent="." unique_id=931177270 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D40" parent="." unique_id=2070904201 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D41" parent="." unique_id=2133404421 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="Area2D42" parent="." unique_id=1688643097 instance=ExtResource("1_4frd1")]
+position = Vector2(722, 298)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=888580913]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1426175338]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CheckButton" type="CheckButton" parent="CanvasLayer/Control" unique_id=109952434]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -127.0
+offset_right = -15.0
+offset_bottom = 85.0
+grow_horizontal = 0
+icon = ExtResource("3_5uke2")
+
+[node name="NextButton" type="Button" parent="CanvasLayer/Control" unique_id=878991976]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -77.0
+offset_right = -16.0
+offset_bottom = -13.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.7371588, 0.7371588)
+theme_override_styles/normal = SubResource("StyleBoxFlat_1nl0a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vp60q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yc1kv")
+icon = ExtResource("5_vp60q")
+
+[connection signal="toggled" from="CanvasLayer/Control/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="pressed" from="CanvasLayer/Control/NextButton" to="." method="_on_next_button_pressed"]

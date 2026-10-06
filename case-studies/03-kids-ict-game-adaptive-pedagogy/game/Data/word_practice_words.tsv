@@ -1,0 +1,57 @@
+"# Word Train (""Scripts/unit_2_word_practice.gd"") word list."	
+#	
+# Format: WORD<tab>LEVEL	
+#   WORD  — letters only (A-Z), anything else on the line is ignored	
+#   LEVEL — 1 = Easy, 2 = Medium, 3 = Tricky. Missing/invalid = 1.	
+# Any further tab-separated columns (a note, a category) are ignored,	
+# so it's safe to add your own for bookkeeping.	
+# Lines starting with # are comments; blank lines are skipped.	
+#	
+# Pick the level that matches a child's current typing comfort —	
+# short/simple words for a beginner, longer ones once they're ready.	
+#	
+# EASY (short, simple)	
+CAT	1
+DOG	1
+SUN	1
+RUN	1
+HOP	1
+BIG	1
+RED	1
+FUN	1
+PIG	1
+GUN	1
+TOP	1
+ZIG	1
+#	
+# MEDIUM	
+TENT	2
+STAR	2
+BALL	2
+FISH	2
+BIRD	2
+FROG	2
+KITE	2
+MILK	2
+RAIN	2
+SNOW	2
+WIND	2
+LEAF	2
+BOOK	2
+DESK	2
+LAMP	2
+#	
+# TRICKY (longer)	
+MOUSE	3
+HOUSE	3
+TIGER	3
+HAPPY	3
+SMILE	3
+WATER	3
+APPLE	3
+TRAIN	3
+PLANT	3
+CHAIR	3
+PIZZA	3
+MONEY	3
+CANDY	3

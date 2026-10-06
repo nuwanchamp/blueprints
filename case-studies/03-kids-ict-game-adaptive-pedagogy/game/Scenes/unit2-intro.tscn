@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dqc7p5y76ty53"]
+
+[ext_resource type="VideoStream" path="res://Assets/Videos/Zig-intro.ogv" id="1_zig"]
+[ext_resource type="Script" path="res://Scripts/unit2_intro.gd" id="2_zig"]
+
+[node name="Unit2Intro" type="Node2D" unique_id=33717030]
+script = ExtResource("2_zig")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+color = Color(0, 0, 0, 1)
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource("1_zig")
+expand = true
+autoplay = true
+
+[connection signal="finished" from="CanvasLayer/VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

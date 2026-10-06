@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[ext_resource type="VideoStream" path="res://Assets/Videos/welcome.ogv" id="1_init"]
+[ext_resource type="Script" path="res://Scripts/pilot_video.gd" id="2_init"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("2_init")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource("1_init")
+expand = true
+autoplay = true
+
+[connection signal="finished" from="CanvasLayer/VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

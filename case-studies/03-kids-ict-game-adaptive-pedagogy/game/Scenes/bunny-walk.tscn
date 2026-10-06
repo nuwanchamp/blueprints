@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://d28w3rndx5kxy"]
+
+[ext_resource type="Texture2D" uid="uid://0lnavloiivu4" path="res://Assets/bunny/Bunny-Idle.png" id="1_tojcr"]
+[ext_resource type="Texture2D" uid="uid://ddx7gqcxa5lci" path="res://Assets/bunny/Bunny-walk-2.png" id="2_mahx2"]
+[ext_resource type="Texture2D" uid="uid://bhr3nhc6dph10" path="res://Assets/bunny/Bunny-walk.png" id="3_cl5aq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1nl0a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tojcr")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tojcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mahx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_tojcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cl5aq")
+}],
+"loop": 1,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[node name="BunnyWalk" type="Node2D" unique_id=416599572]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1876404337]
+sprite_frames = SubResource("SpriteFrames_1nl0a")
+animation = &"walking"
+frame_progress = 0.18339023

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://tw7lj2elhjuh"]
+
+[ext_resource type="Script" uid="uid://c26o4fh8pmit6" path="res://Scripts/unit_1_level_4.gd" id="1_kwhmn"]
+
+[node name="Unit1Level4" type="Node2D" unique_id=1342200835]
+script = ExtResource("1_kwhmn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=189652516]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=805818622]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

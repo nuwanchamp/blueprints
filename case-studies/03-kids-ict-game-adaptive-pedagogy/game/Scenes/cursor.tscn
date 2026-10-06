@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bsh10g1m0xeop"]
+
+[ext_resource type="Texture2D" uid="uid://c3wh3ocbbh0ld" path="res://Assets/handmouse.png" id="1_fsq4c"]
+[ext_resource type="Script" uid="uid://cbu1ry2tirdxv" path="res://Scripts/cursor.gd" id="1_i7fis"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1nl0a"]
+size = Vector2(98, 94)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" unique_id=1156386781]
+script = ExtResource("1_i7fis")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=775111607]
+shape = SubResource("RectangleShape2D_1nl0a")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=684589071]
+texture = ExtResource("1_fsq4c")

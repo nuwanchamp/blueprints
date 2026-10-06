@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://f652gv232dvp"]
+
+[ext_resource type="Script" uid="uid://dbtjud5y5kijw" path="res://Scripts/welcomescene.gd" id="1_pn2v2"]
+[ext_resource type="Texture2D" uid="uid://cb41ilyo1ddd6" path="res://Assets/Gemini_Generated_Image_a8pmp6a8pmp6a8pm.png" id="2_px58o"]
+[ext_resource type="FontFile" uid="uid://bjxairneclgo8" path="res://Assets/Coiny-Regular.ttf" id="3_kuxbu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5bkde"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.011087577, 0.011087581, 0.011087568, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.11764706, 0.11764706, 0.11764706, 0.7882353)
+shadow_size = 2
+shadow_offset = Vector2(4, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rwtka"]
+bg_color = Color(0.70459914, 0.52812856, 0.17540354, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.011087577, 0.011087581, 0.011087568, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.11764706, 0.11764706, 0.11764706, 0.7882353)
+shadow_size = 2
+shadow_offset = Vector2(4, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dm54"]
+bg_color = Color(0.70796657, 0.7079665, 0.7079665, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.011087577, 0.011087581, 0.011087568, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.11764706, 0.11764706, 0.11764706, 0.7882353)
+shadow_size = 2
+shadow_offset = Vector2(4, 5)
+
+[node name="Node2D" type="Node2D" unique_id=2130382377]
+script = ExtResource("1_pn2v2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=835559497]
+position = Vector2(677, 376)
+texture = ExtResource("2_px58o")
+
+[node name="Backdrop" type="ColorRect" parent="." unique_id=1830811922]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.015686275, 0.015686275, 0.015686275, 0.54901963)
+
+[node name="Label" type="Label" parent="." unique_id=272892023]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 417.0
+offset_top = 268.0
+offset_right = 970.0
+offset_bottom = 301.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+offset_transform_enabled = true
+theme_override_colors/font_color = Color(0.9166399, 0.91663986, 0.9166398, 1)
+theme_override_colors/font_shadow_color = Color(0.015686275, 0.015686275, 0.015686275, 0.93333334)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_kuxbu")
+theme_override_font_sizes/font_size = 43
+text = "WELCOME ADVENTURER"
+
+[node name="Button" type="Button" parent="." unique_id=76490839]
+offset_left = 522.0
+offset_top = 174.0
+offset_right = 762.0
+offset_bottom = 247.0
+theme_override_colors/font_color = Color(0.017552735, 0.10776413, 0.07950457, 1)
+theme_override_fonts/font = ExtResource("3_kuxbu")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_5bkde")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rwtka")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4dm54")
+text = "START"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

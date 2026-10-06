@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://c8dula4lp385w"]
+
+[ext_resource type="Texture2D" uid="uid://dtip0cu6qs1qa" path="res://Assets/bunny-house/house-cloased.png" id="1_5318j"]
+[ext_resource type="Texture2D" uid="uid://bnvd1jvjxev03" path="res://Assets/bunny-house/house-slight-open.png" id="2_b0jxx"]
+[ext_resource type="Texture2D" uid="uid://c6j8hx0vp438b" path="res://Assets/chick-house/house-chick-0.png" id="3_5318j"]
+[ext_resource type="Texture2D" uid="uid://taubxpbsy7m0" path="res://Assets/chick-house/house-chick1.png" id="4_b0jxx"]
+[ext_resource type="Texture2D" uid="uid://bx6opv0xwfcbc" path="res://Assets/chick-house/house-chick2.png" id="5_a2ict"]
+[ext_resource type="Texture2D" uid="uid://cqtq3keo7bj2r" path="res://Assets/chick-house/house-chick3.png" id="6_kovqy"]
+[ext_resource type="Texture2D" uid="uid://b6wu0ei4wvcjy" path="res://Assets/chick-house/house-chick4.png" id="7_rfdgi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o7wjx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5318j")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5318j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_b0jxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5318j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b0jxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a2ict")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kovqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rfdgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kovqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a2ict")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rfdgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5318j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_b0jxx")
+}],
+"loop": 0,
+"name": &"house-open",
+"speed": 5.0
+}]
+
+[node name="AnimatedHouse" type="Node2D" unique_id=317413896]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=928466088]
+sprite_frames = SubResource("SpriteFrames_o7wjx")
+animation = &"house-open"
