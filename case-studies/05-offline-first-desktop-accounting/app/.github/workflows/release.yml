@@ -1,0 +1,68 @@
+# Pushing a tag such as v0.1.4 builds the Windows installer and publishes it as a GitHub release.
+# The counter PC sees it within a few hours (or at once with "Check for updates"); the manager installs it with the admin PIN.
+#
+# Repository secrets:
+#   GH_TOKEN         - a token that can create releases in the releases repo (electron-builder.yml → publish)
+#   DAYBOOK_ADMIN_PIN  - the admin PIN; only its salted hash goes into the app
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+env:
+  # Where the installers go: the same repo as electron-builder.yml → publish
+  RELEASES_REPO: example-org/daybook-releases
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - name: Check the tag matches package.json
+        shell: bash
+        run: test "v$(node -p "require('./package.json').version")" = "${GITHUB_REF_NAME}"
+      # electron-builder uploads files side by side, and each upload would create a missing release, so it races
+      # with itself. Making the release first leaves it only the uploads.
+      - name: Create the release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          gh release view "$GITHUB_REF_NAME" -R "$RELEASES_REPO" >/dev/null 2>&1 || gh release create "$GITHUB_REF_NAME" -R "$RELEASES_REPO" --title "Daybook ${GITHUB_REF_NAME#v}" --notes "Daybook ${GITHUB_REF_NAME#v}"
+      - name: Build and publish the installer
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          DAYBOOK_ADMIN_PIN: ${{ secrets.DAYBOOK_ADMIN_PIN }}
+        run: |
+          test -n "$DAYBOOK_ADMIN_PIN" || { echo "DAYBOOK_ADMIN_PIN secret is missing: this build could never install updates"; exit 1; }
+          npm run electron:build
+          npx electron-builder --win nsis --publish always
+
+  # The AppImage updates the same way, so a Linux PC can try a release before the counter PC gets it.
+  # It runs after Windows, so the two jobs don't both try to create the release.
+  linux:
+    needs: windows
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Build and publish the AppImage
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          DAYBOOK_ADMIN_PIN: ${{ secrets.DAYBOOK_ADMIN_PIN }}
+        run: |
+          npm run electron:build
+          npx electron-builder --linux AppImage --publish always

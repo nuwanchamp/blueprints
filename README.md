@@ -6,6 +6,7 @@
 |---|---|---|
 | [Plugin Framework Architecture](case-studies/01-plugin-framework-architecture) | Event-driven plugin/micro-frontend framework for an enterprise Symfony monitoring platform | 40% faster release cycles, 10+ features centralized |
 | [Kids' ICT Game: Mouse & Keyboard Skills](case-studies/03-kids-ict-game-adaptive-pedagogy) | Gamified computer-skills training for children with special educational needs in Sri Lanka: no-fail difficulty, audio-first, teacher-editable content | 20 levels, 2 practice modes; in active use by 5-7 students at Rainbow Roots Academy |
+| [Offline-First Desktop Accounting](case-studies/05-offline-first-desktop-accounting) | Restaurant accounting built from watching the manual process: daily entry and drawer balancing, profit and loss with expense drill-down. Browser demo first, then Electron with SQLite, verified backups and tag-based releases with PIN-gated self-update *(client anonymized)* | Real source published; 50 unit + 88 browser + 8 Electron tests; Windows installer and Linux AppImage built in CI |
 
 <!-- Todo More case studies (VoIP monitoring at scale, event-driven subnet scanning, clean architecture & TDD in Laravel) are in progress.
 -->

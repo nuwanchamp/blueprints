@@ -1,0 +1,60 @@
+{
+  "name": "daybook-system",
+  "private": true,
+  "version": "0.1.9",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc -b --noEmit && tsc -p electron/tsconfig.json",
+    "e2e": "playwright test",
+    "electron:build": "npm run build && node scripts/build-electron.mjs",
+    "electron:start": "electron .",
+    "electron:dev": "node scripts/build-electron.mjs && DAYBOOK_DEV_URL=http://127.0.0.1:5173 electron .",
+    "e2e:electron": "playwright test -c playwright.electron.config.ts",
+    "dist:win": "npm run electron:build && electron-builder --win nsis --publish never",
+    "dist:linux": "npm run electron:build && electron-builder --linux --publish never"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "24.19.2",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^6.1.2",
+    "electron": "42.11.14",
+    "electron-builder": "26.17.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^4.1.11"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource/noto-sans-sc": "^5.3.1",
+    "@fontsource/noto-serif-sc": "^5.3.1",
+    "@hookform/resolvers": "^3.10.0",
+    "@radix-ui/react-switch": "^1.4.1",
+    "@sqlite.org/sqlite-wasm": "^3.54.1-build1",
+    "clsx": "^2.1.1",
+    "electron-updater": "^6.8.11",
+    "exceljs": "^4.4.0",
+    "i18next": "^26.5.11",
+    "lucide-react": "1.57.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.91.0",
+    "react-i18next": "^17.1.9",
+    "react-router-dom": "^6.30.6",
+    "recharts": "^2.15.4",
+    "tailwind-merge": "^3.7.0",
+    "zod": "^3.25.76"
+  },
+  "main": "dist-electron/main.cjs",
+  "description": "Daybook restaurant accounts: daily close, expenses, cash and reports",
+  "author": {
+    "name": "Daybook"
+  }
+}

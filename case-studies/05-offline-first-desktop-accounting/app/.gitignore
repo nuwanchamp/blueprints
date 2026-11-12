@@ -1,0 +1,28 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+dist-electron/
+release/
+*.tsbuildinfo
+
+# test output (Playwright writes reports, traces and screenshots here)
+test-results/
+playwright-report/
+blob-report/
+e2e/shots/
+coverage/
+
+# editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# local environment and logs
+.env
+.env.*
+!.env.example
+*.log
+npm-debug.log*

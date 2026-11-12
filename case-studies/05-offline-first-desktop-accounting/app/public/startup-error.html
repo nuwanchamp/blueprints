@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daybook can't open its data</title>
+    <style>
+      /* Shown by electron/main.ts instead of the app when the database can't be opened. The data file is left as it
+         was; this page explains what happened and can still install an update, which is usually the fix. */
+      @font-face {
+        font-family: 'Inter Variable';
+        font-style: normal;
+        font-weight: 100 900;
+        src: url('fonts/inter-latin-wght-normal.woff2') format('woff2-variations');
+      }
+      :root {
+        color-scheme: light;
+        --paper: #f4f3f1;
+        --card: #ffffff;
+        --ink: #282624;
+        --muted: #6f6a65;
+        --line: #e4e1dc;
+        --loss: #a3302a;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--paper);
+        color: var(--ink);
+        font: 15px/1.5 'Inter Variable', Inter, ui-sans-serif, system-ui, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        display: flex;
+        justify-content: center;
+        padding: 48px 16px;
+      }
+      main {
+        width: 100%;
+        max-width: 640px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      section {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 20px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.25;
+      }
+      h2 {
+        margin: 0 0 4px;
+        font-size: 17px;
+      }
+      p {
+        margin: 6px 0 0;
+      }
+      .zh,
+      .muted {
+        color: var(--muted);
+      }
+      .error {
+        color: var(--loss);
+        font-weight: 600;
+      }
+      code {
+        display: block;
+        margin-top: 10px;
+        padding: 8px 10px;
+        border-radius: 8px;
+        background: var(--paper);
+        font-size: 12px;
+        overflow-wrap: anywhere;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 14px;
+      }
+      button {
+        height: 44px;
+        padding: 0 18px;
+        border-radius: 8px;
+        border: 1px solid var(--ink);
+        background: var(--ink);
+        color: #fff;
+        font: inherit;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      button.secondary {
+        background: #fff;
+        color: var(--ink);
+        border-color: #cfcac4;
+      }
+      button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      input {
+        height: 44px;
+        width: 220px;
+        padding: 0 12px;
+        border-radius: 8px;
+        border: 1px solid #cfcac4;
+        font: inherit;
+      }
+      [hidden] {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Daybook can't open its data</h1>
+        <p class="zh">Daybook 无法打开数据</p>
+        <p id="why"></p>
+        <p id="why-zh" class="zh"></p>
+        <p><strong>Your data has not been changed.</strong> <span class="zh">数据没有被改动。</span></p>
+        <code id="detail"></code>
+      </section>
+
+      <section>
+        <h2>Install an update <span class="zh">安装更新</span></h2>
+        <p class="muted">This is usually fixed by a newer version. The manager can install it here with the admin PIN.</p>
+        <p class="zh">通常安装新版本即可解决。经理可在此用管理员密码安装。</p>
+        <p id="status"></p>
+        <div class="row">
+          <button id="check" class="secondary" type="button">Check for updates / 检查更新</button>
+        </div>
+        <form id="pin-form" class="row" hidden>
+          <input id="pin" type="password" autocomplete="off" aria-label="Admin PIN / 管理员密码" placeholder="Admin PIN / 管理员密码" />
+          <button id="unlock" type="submit">Install / 安装</button>
+        </form>
+        <p id="pin-error" class="error" hidden></p>
+        <div class="row" hidden id="ready-row">
+          <button id="install" type="button">Restart and install / 重启并安装</button>
+        </div>
+      </section>
+
+      <section>
+        <h2>If there is no update <span class="zh">如果没有更新</span></h2>
+        <p class="muted">Call the person who looks after Daybook and tell them the message above. Don't delete any files in the Daybook folders.</p>
+        <p class="zh">请联系负责 Daybook 的人员，并告诉他们上面的信息。不要删除 Daybook 文件夹里的任何文件。</p>
+      </section>
+    </main>
+
+    <script>
+      const WHY = {
+        newer: [
+          'The data was saved by a newer version of Daybook than this one. Install that newer version (or a later one).',
+          '数据由更新版本的 Daybook 保存。请安装该版本或更高版本。',
+        ],
+        upgradeFailed: [
+          "This version couldn't upgrade the data to its new layout. The upgrade was undone, and a copy from before it is in the data folder (before-upgrade).",
+          '此版本无法升级数据，升级已撤销。升级前的副本保存在数据文件夹（before-upgrade）中。',
+        ],
+        openFailed: ["The data file couldn't be opened. It may be in use or damaged.", '无法打开数据文件，可能正被使用或已损坏。'],
+      }
+      const native = window.daybookNative
+      const $ = (id) => document.getElementById(id)
+      let token = null
+
+      const show = (s) => {
+        const text = {
+          off: 'Updates are switched off in this copy.',
+          checking: 'Checking…',
+          none: 'No newer version yet.',
+          error: "Couldn't check. Check the internet connection.",
+          available: `Version ${s.version} is available.`,
+          downloading: `Downloading… ${s.percent ?? 0}%`,
+          ready: 'The update is downloaded.',
+          idle: '',
+        }[s.state]
+        $('status').textContent = `This computer has version ${s.current}. ${text ?? ''}`
+        $('check').disabled = ['off', 'checking', 'downloading'].includes(s.state)
+        $('pin-form').hidden = !(s.canInstall && (s.state === 'available' || (s.state === 'ready' && !token)))
+        $('ready-row').hidden = !(s.state === 'ready' && token)
+      }
+
+      async function start() {
+        const err = native ? await native.startError() : null
+        const why = WHY[err?.code] ?? WHY.openFailed
+        $('why').textContent = why[0]
+        $('why-zh').textContent = why[1]
+        $('detail').textContent = err?.detail ?? ''
+        if (!native?.update) return
+        native.update.onStatus(show)
+        show(await native.update.getStatus())
+        $('check').onclick = async () => show(await native.update.check())
+        $('pin-form').onsubmit = async (e) => {
+          e.preventDefault()
+          const r = await native.update.unlock($('pin').value)
+          $('pin').value = ''
+          $('pin-error').hidden = r.ok
+          if (!r.ok) {
+            $('pin-error').textContent =
+              r.reason === 'locked'
+                ? `Too many wrong tries. Try again after ${new Date(r.lockedUntil).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}. / 错误次数过多，请稍后再试。`
+                : `That PIN is not right. ${r.triesLeft} tries left. / 密码不正确。`
+            return
+          }
+          token = r.token
+          const s = await native.update.getStatus()
+          if (s.state === 'available') await native.update.download(token)
+          show(await native.update.getStatus())
+        }
+        $('install').onclick = async () => {
+          $('install').disabled = true
+          try {
+            await native.update.install(token)
+          } catch {
+            $('install').disabled = false
+            token = null
+            show(await native.update.getStatus())
+          }
+        }
+      }
+      void start()
+    </script>
+  </body>
+</html>

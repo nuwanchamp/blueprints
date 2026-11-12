@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" width="400" height="420" role="img" aria-label="Daybook logo">
+<title>Daybook</title>
+<style>
+#type path{fill:none;stroke:#666;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 4s ease-out infinite}
+@keyframes draw{0%{stroke-dashoffset:1;fill-opacity:0}70%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+</style>
+<g id="type"><path pathLength="1" d="M60 90 h280 a20 20 0 0 1 20 20 v190 a20 20 0 0 1 -20 20 h-280 a20 20 0 0 1 -20 -20 v-190 a20 20 0 0 1 20 -20 z"/><path pathLength="1" d="M200 90 v230"/><path pathLength="1" d="M76 130 h104"/><path pathLength="1" d="M216 130 h104"/><path pathLength="1" d="M76 170 h104"/><path pathLength="1" d="M216 170 h104"/><path pathLength="1" d="M76 210 h104"/><path pathLength="1" d="M216 210 h104"/><path pathLength="1" d="M76 250 h104"/><path pathLength="1" d="M216 250 h104"/></g>
+<text x="200" y="395" text-anchor="middle" font-family="Inter, sans-serif" font-size="34" letter-spacing="8" fill="#666">DAYBOOK</text>
+</svg>

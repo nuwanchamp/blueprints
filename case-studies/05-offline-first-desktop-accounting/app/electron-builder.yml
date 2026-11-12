@@ -1,0 +1,41 @@
+# Packages the desktop app. The page is already bundled into dist/ and the main process into dist-electron/,
+# and the main process only uses Node built-ins (node:sqlite), so no node_modules ship with the app.
+appId: dev.example.daybook
+productName: Daybook
+executableName: Daybook
+copyright: Daybook
+directories:
+  output: release
+  buildResources: build
+files:
+  - dist/**
+  - dist-electron/**
+  - package.json
+  - '!node_modules/**'
+asar: true
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  icon: build/icon.ico
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Daybook
+  # Uninstalling leaves the data and backups alone; they are in %APPDATA%\Daybook and the chosen backup folder
+  deleteAppDataOnUninstall: false
+# Where the app looks for updates (electron-updater reads latest.yml from the newest release). The releases repo
+# must be public, so the app needs no token; the code can stay in a private repo.
+publish:
+  provider: github
+  owner: example-org
+  repo: daybook-releases
+  releaseType: release
+linux:
+  executableName: daybook
+  target: [AppImage]
+  category: Office
+  icon: build/icon.png

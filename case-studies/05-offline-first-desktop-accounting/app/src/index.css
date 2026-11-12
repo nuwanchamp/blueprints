@@ -1,0 +1,139 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+@import '@fontsource/noto-sans-sc/400.css';
+@import '@fontsource/noto-sans-sc/500.css';
+@import '@fontsource/noto-sans-sc/700.css';
+@import '@fontsource/noto-serif-sc/600.css';
+
+@theme {
+  --color-ink: #151413;
+  --color-page: #f4f3f1;
+  --color-line: #e4e1dc;
+  --color-muted: #66615b;
+  --color-tint: #efedea;
+  --color-control: #8a857e;
+  /* the one accent: a loss. Always shown with a minus sign and the word Loss, never by colour alone */
+  --color-loss: #b3261e;
+  --color-loss-tint: #fbeae8;
+  /* needs attention, nothing is broken: pale amber with a dark brown text (6:1 on the tint) */
+  --color-warn: #8a5200;
+  --color-warn-tint: #fff4da;
+  --color-warn-line: #e0a63a;
+  /* a finished step: bright green with an ink tick (7:1 on the green; white would only reach 2.5:1) */
+  --color-ok: #00bd49;
+  /* one hue per area of the app, for its icon and marker only; never for amounts, never meaning good or bad */
+  --color-area-income: #0f766e;
+  --color-area-income-tint: #e2f3f1;
+  --color-area-expenses: #4338ca;
+  --color-area-expenses-tint: #e9e8fb;
+  --color-area-drawer: #86198f;
+  --color-area-drawer-tint: #f6e6f7;
+  --color-area-general: #475569;
+  --color-area-general-tint: #eceff3;
+
+  /* Inter covers Latin; Noto Sans SC takes over for Chinese glyphs */
+  --font-sans: 'Inter Variable', 'Noto Sans SC', system-ui, sans-serif;
+  --font-serif: 'Noto Serif SC', serif;
+}
+
+@layer base {
+  html {
+    background: var(--color-page);
+    color: var(--color-ink);
+  }
+  body {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
+  }
+  /* a field with a validation error keeps the red outline while it has focus */
+  [aria-invalid='true']:focus-visible {
+    outline-color: var(--color-loss);
+  }
+}
+
+@layer components {
+  /* Bars and swatches are drawn as backgrounds, which browsers leave out of a printout unless told to keep them */
+  .print-exact {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  /* Row actions appear when the row is hovered or holds keyboard focus. Touch screens have no hover, so they stay visible. */
+  .row-actions {
+    opacity: 0;
+    transition: opacity 120ms;
+  }
+  .row-group:hover .row-actions,
+  .row-group:focus-within .row-actions {
+    opacity: 1;
+  }
+  @media (hover: none) {
+    .row-actions {
+      opacity: 1;
+    }
+  }
+}
+
+/* While printing, charts take the page's width instead of the screen's (see PeriodBar) */
+html.printing .recharts-responsive-container {
+  width: 170mm !important;
+  max-width: 100%;
+}
+
+/*
+ * Paper has no printer margins; the page's own padding is the margin, repeated on every page a box runs onto.
+ * Then every page lays out at the same width, and the report cover can reach the edges of its sheet.
+ */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    background: #fff;
+  }
+  .report-cover {
+    position: relative;
+    width: 210mm;
+    height: 297mm;
+    overflow: hidden;
+    background: #f2e8d5;
+    break-after: page;
+    /* Its paper colour and logo block print even where backgrounds are normally left out */
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  /* A printed report is read on white paper: keep the ink, drop the tints that waste it */
+  main {
+    padding: 12mm !important;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    /* Nothing may be wider than the page: Chromium would shrink the whole printout, the cover with it */
+    overflow-x: clip;
+  }
+  /*
+   * A table takes the page's width, however many columns the data brings: columns share it by their content and
+   * wrap when they must. An amount only wraps between "AED" and the number; a heading may break inside a word,
+   * so that a table with many columns still fits and no column is lost.
+   */
+  table {
+    font-size: 9px;
+    width: 100% !important;
+  }
+  th {
+    font-size: 8px;
+    overflow-wrap: anywhere;
+  }
+  tr,
+  li,
+  .recharts-responsive-container {
+    break-inside: avoid;
+  }
+}
